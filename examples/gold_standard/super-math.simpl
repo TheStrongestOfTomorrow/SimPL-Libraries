@@ -1,0 +1,363 @@
+-- ============================================
+-- Package: super-math
+-- Version: 1.0.0
+-- Author: @simpl-core-team
+-- License: MIT
+-- Description: A collection of mathematical utilities for SimPL
+-- Dependencies: none
+-- Tags: math, utility, beginner, arithmetic
+-- ============================================
+
+-- 
+-- SUPER-MATH LIBRARY
+-- ==================
+-- This library provides essential mathematical functions
+-- for SimPL developers. Perfect for beginners learning
+-- the language and experienced devs who need quick math ops.
+--
+
+-- ============================================
+-- CONSTANTS
+-- ============================================
+
+-- The mathematical constant Pi (π)
+-- Useful for circle calculations
+let PI = 3.14159265358979
+
+-- The mathematical constant e (Euler's number)
+-- Used in exponential and logarithmic functions
+let E = 2.71828182845905
+
+-- ============================================
+-- BASIC ARITHMETIC FUNCTIONS
+-- ============================================
+
+-- add: Adds two numbers together
+-- 
+-- Parameters:
+--   a: Int or Float - The first number
+--   b: Int or Float - The second number
+--
+-- Returns:
+--   Int or Float - The sum of a and b
+--
+-- Example:
+--   let result = add(2, 3)  -- Returns 5
+fn add(a, b) {
+    return a + b
+}
+
+-- subtract: Subtracts the second number from the first
+--
+-- Parameters:
+--   a: Int or Float - The number to subtract from
+--   b: Int or Float - The number to subtract
+--
+-- Returns:
+--   Int or Float - The difference (a - b)
+--
+-- Example:
+--   let result = subtract(10, 4)  -- Returns 6
+fn subtract(a, b) {
+    return a - b
+}
+
+-- multiply: Multiplies two numbers together
+--
+-- Parameters:
+--   a: Int or Float - The first factor
+--   b: Int or Float - The second factor
+--
+-- Returns:
+--   Int or Float - The product of a and b
+--
+-- Example:
+--   let result = multiply(7, 8)  -- Returns 56
+fn multiply(a, b) {
+    return a * b
+}
+
+-- divide: Divides the first number by the second
+--
+-- Parameters:
+--   a: Int or Float - The dividend
+--   b: Int or Float - The divisor (must not be zero)
+--
+-- Returns:
+--   Float - The quotient (a / b)
+--
+-- Note: Division by zero will return an error value
+--
+-- Example:
+--   let result = divide(20, 4)  -- Returns 5.0
+fn divide(a, b) {
+    if b == 0 {
+        return "ERROR: Division by zero"
+    }
+    return a / b
+}
+
+-- ============================================
+-- ADVANCED MATHEMATICAL FUNCTIONS
+-- ============================================
+
+-- factorial: Calculates the factorial of a non-negative integer
+--
+-- The factorial of n (written n!) is the product of all
+-- positive integers less than or equal to n.
+-- For example: 5! = 5 × 4 × 3 × 2 × 1 = 120
+--
+-- Parameters:
+--   n: Int - A non-negative integer
+--
+-- Returns:
+--   Int - The factorial of n
+--
+-- Example:
+--   let result = factorial(5)  -- Returns 120
+fn factorial(n) {
+    -- Base case: 0! and 1! both equal 1
+    if n <= 1 {
+        return 1
+    }
+    -- Recursive case: n! = n × (n-1)!
+    return n * factorial(n - 1)
+}
+
+-- is_even: Checks if a number is even
+--
+-- An even number is divisible by 2 with no remainder.
+--
+-- Parameters:
+--   n: Int - The number to check
+--
+-- Returns:
+--   Bool - true if n is even, false otherwise
+--
+-- Example:
+--   is_even(4)  -- Returns true
+--   is_even(7)  -- Returns false
+fn is_even(n) {
+    return n % 2 == 0
+}
+
+-- is_odd: Checks if a number is odd
+--
+-- An odd number has a remainder of 1 when divided by 2.
+--
+-- Parameters:
+--   n: Int - The number to check
+--
+-- Returns:
+--   Bool - true if n is odd, false otherwise
+--
+-- Example:
+--   is_odd(3)  -- Returns true
+--   is_odd(6)  -- Returns false
+fn is_odd(n) {
+    return n % 2 != 0
+}
+
+-- power: Raises a base number to an exponent
+--
+-- Calculates base^exponent (base raised to the power of exponent)
+-- Uses iterative multiplication for simplicity.
+--
+-- Parameters:
+--   base: Int or Float - The base number
+--   exponent: Int - The power to raise to (must be non-negative)
+--
+-- Returns:
+--   Int or Float - base raised to the power of exponent
+--
+-- Example:
+--   power(2, 3)  -- Returns 8 (2³ = 2×2×2)
+--   power(5, 2)  -- Returns 25 (5²)
+fn power(base, exponent) {
+    -- Handle edge case: anything to the power of 0 is 1
+    if exponent == 0 {
+        return 1
+    }
+    
+    -- Start with the base value
+    let result = base
+    
+    -- Multiply by base (exponent - 1) more times
+    let i = 1
+    while i < exponent {
+        result = result * base
+        let i = i + 1
+    }
+    
+    return result
+}
+
+-- absolute: Returns the absolute value of a number
+--
+-- The absolute value is the distance from zero,
+-- so it's always non-negative.
+--
+-- Parameters:
+--   n: Int or Float - The number
+--
+-- Returns:
+--   Int or Float - The absolute value (always positive or zero)
+--
+-- Example:
+--   absolute(-5)  -- Returns 5
+--   absolute(3)   -- Returns 3
+fn absolute(n) {
+    if n < 0 {
+        return -n
+    }
+    return n
+}
+
+-- ============================================
+-- GEOMETRY FUNCTIONS
+-- ============================================
+
+-- circle_area: Calculates the area of a circle
+--
+-- Formula: A = π × r²
+--
+-- Parameters:
+--   radius: Int or Float - The radius of the circle
+--
+-- Returns:
+--   Float - The area of the circle
+--
+-- Example:
+--   circle_area(5)  -- Returns approximately 78.54
+fn circle_area(radius) {
+    return PI * power(radius, 2)
+}
+
+-- circle_circumference: Calculates the circumference of a circle
+--
+-- Formula: C = 2 × π × r
+--
+-- Parameters:
+--   radius: Int or Float - The radius of the circle
+--
+-- Returns:
+--   Float - The circumference of the circle
+--
+-- Example:
+--   circle_circumference(5)  -- Returns approximately 31.42
+fn circle_circumference(radius) {
+    return 2 * PI * radius
+}
+
+-- ============================================
+-- UTILITY FUNCTIONS
+-- ============================================
+
+-- clamp: Restricts a value to be within a range
+--
+-- If value is below min, returns min.
+-- If value is above max, returns max.
+-- Otherwise, returns the value unchanged.
+--
+-- Parameters:
+--   value: Int or Float - The value to clamp
+--   min: Int or Float - The minimum allowed value
+--   max: Int or Float - The maximum allowed value
+--
+-- Returns:
+--   Int or Float - The clamped value
+--
+-- Example:
+--   clamp(15, 0, 10)   -- Returns 10 (capped at max)
+--   clamp(-5, 0, 10)   -- Returns 0 (raised to min)
+--   clamp(5, 0, 10)    -- Returns 5 (unchanged)
+fn clamp(value, min, max) {
+    if value < min {
+        return min
+    }
+    if value > max {
+        return max
+    }
+    return value
+}
+
+-- sum_range: Calculates the sum of all integers in a range
+--
+-- Adds up all integers from start to end (inclusive).
+-- Uses the arithmetic series formula for efficiency.
+--
+-- Parameters:
+--   start: Int - The starting number
+--   end: Int - The ending number
+--
+-- Returns:
+--   Int - The sum of all integers from start to end
+--
+-- Example:
+--   sum_range(1, 5)  -- Returns 15 (1+2+3+4+5)
+fn sum_range(start, end) {
+    -- Ensure start is less than or equal to end
+    if start > end {
+        let temp = start
+        let start = end
+        let end = temp
+    }
+    
+    -- Use the arithmetic series formula: n(a1 + an)/2
+    let count = end - start + 1
+    return count * (start + end) / 2
+}
+
+-- ============================================
+-- USAGE EXAMPLES
+-- ============================================
+-- Below shows how a user would import and use this library.
+-- Uncomment these lines to test the library directly.
+
+/*
+-- Import the library
+import super-math
+
+-- Basic arithmetic examples
+print(super-math::add(10, 5))           -- Output: 15
+print(super-math::subtract(10, 5))      -- Output: 5
+print(super-math::multiply(10, 5))      -- Output: 50
+print(super-math::divide(10, 5))        -- Output: 2.0
+
+-- Factorial example
+print(super-math::factorial(5))         -- Output: 120
+print(super-math::factorial(0))         -- Output: 1
+
+-- Even/Odd checks
+print(super-math::is_even(4))           -- Output: true
+print(super-math::is_odd(4))            -- Output: false
+print(super-math::is_odd(7))            -- Output: true
+
+-- Power function
+print(super-math::power(2, 10))         -- Output: 1024
+print(super-math::power(3, 4))          -- Output: 81
+
+-- Absolute value
+print(super-math::absolute(-42))        -- Output: 42
+print(super-math::absolute(42))         -- Output: 42
+
+-- Geometry calculations
+print(super-math::circle_area(10))      -- Output: ~314.16
+print(super-math::circle_circumference(10))  -- Output: ~62.83
+
+-- Clamping values
+print(super-math::clamp(150, 0, 100))   -- Output: 100
+print(super-math::clamp(-10, 0, 100))   -- Output: 0
+print(super-math::clamp(50, 0, 100))    -- Output: 50
+
+-- Sum of a range
+print(super-math::sum_range(1, 100))    -- Output: 5050
+
+-- Using constants
+print(super-math::PI)                   -- Output: 3.14159265358979
+print(super-math::E)                    -- Output: 2.71828182845905
+*/
+
+-- ============================================
+-- END OF LIBRARY
+-- ============================================
