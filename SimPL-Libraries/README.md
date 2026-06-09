@@ -2,11 +2,11 @@
 
 # SimPL-Libraries
 
-**The Community Package Registry for [SimPL](https://github.com/thestrongestoftomorrow/SimPL)**
+**The Community Package Registry for [SimPL](https://github.com/TheStrongestOfTomorrow/SimPL)**
 
 *Publish. Install. Share.*
 
-[![SimPL](https://img.shields.io/badge/SimPL-0.6.0-blue.svg)](https://github.com/thestrongestoftomorrow/SimPL)
+[![SimPL](https://img.shields.io/badge/SimPL-0.8.0-blue.svg)](https://github.com/TheStrongestOfTomorrow/SimPL)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Packages](https://img.shields.io/badge/packages-community-orange.svg)](#-available-packages)
 
@@ -52,7 +52,7 @@ let result = super-math.add(10, 20)
 print result  # 30
 ```
 
-That's it! Browse all packages below or in the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
+That's it! Browse all packages below or in the [Issues tab](https://github.com/TheStrongestOfTomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
 
 > **Tip**: You can also install packages from the **TUI** — launch `python simpl.py` and use the built-in package menu to browse and install without leaving the interface.
 
@@ -77,21 +77,23 @@ There is no central server, no authentication, and no build pipeline. GitHub Iss
 
 ## 📦 Available Packages
 
-> **Note**: This section is manually updated. For the full, always-up-to-date list, check the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
+> **Note**: This section is manually updated. For the full, always-up-to-date list, check the [Issues tab](https://github.com/TheStrongestOfTomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
 
 ### Official Packages
 
 | Package | Version | Description |
 |---------|---------|-------------|
-| `super-math` | 1.0.0 | Enhanced math functions: add, subtract, multiply, divide, power, max, min |
-| `string-utils` | 1.0.0 | String utility functions: uppercase, lowercase, length, capitalize, reverse, contains, starts_with, ends_with |
-| `io-utils` | 0.5.0 | File I/O utilities: read_file, write_file, append_file, file_exists, file_size |
-| `list-tools` | 0.5.0 | Advanced list operations: filter, map, reduce, flatten, zip, unique |
-| `color-kit` | 0.3.0 | Terminal color output: red, green, blue, yellow, bold, underline |
+| `super-math` | 2.0.0 | Enhanced math functions: add, subtract, multiply, divide, power, max, min, abs, sqrt, floor, ceil, round, average, sum, median, clamp, lerp, factorial |
+| `string-utils` | 2.0.0 | String utility functions: uppercase, lowercase, length, capitalize, reverse, contains, starts_with, ends_with, trim, replace, repeat, word_count |
+| `io-utils` | 1.5.0 | File I/O utilities: read, write, append, read_lines, write_lines, copy, file_size |
+| `list-tools` | 1.5.0 | Advanced list operations: reverse, sort, contains, index_of, unique, flatten, chunk, take, drop |
+| `color-kit` | 1.0.0 | Terminal color output: red, green, yellow, blue, magenta, cyan, bold, underline, dim, rainbow |
+| `http-client` | 1.0.0 | HTTP client utilities: get_json, post_json, is_success, status_ok, status_not_found |
+| `json-tools` | 1.0.0 | JSON manipulation utilities: parse, stringify, compact, get_path, set_path, merge, save, load |
 
 ### Community Packages
 
-Community packages are published by users like you! Browse them all in the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
+Community packages are published by users like you! Browse them all in the [Issues tab](https://github.com/TheStrongestOfTomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
 
 *Want to see your package listed here? Publish it and open a PR to update this table!*
 
@@ -169,7 +171,7 @@ let my-greeter.version = "1.0.0"
 
 ### Step 2: Create the Issue
 
-1. Go to [Issues → New Issue](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues/new/choose) and select the **Package Submission** template
+1. Go to [Issues → New Issue](https://github.com/TheStrongestOfTomorrow/SimPL-Libraries/issues/new/choose) and select the **Package Submission** template
 2. Set the **title** to your exact package name (e.g., `my-greeter`)
 3. Add the YAML frontmatter and code block (see [Package Format](#package-format) below)
 4. Submit the Issue
@@ -272,7 +274,7 @@ end
 
 ### How is this different from NPM or PyPI?
 
-SimPL-Libraries uses GitHub Issues as the registry — there's no separate server, no CLI login, and no build pipeline. It's designed for simplicity and accessibility, matching SimPL's philosophy. For heavy-duty JavaScript packages, use the [NPM Bridge](https://github.com/thestrongestoftomorrow/SimPL#npm-bridge) instead.
+SimPL-Libraries uses GitHub Issues as the registry — there's no separate server, no CLI login, and no build pipeline. It's designed for simplicity and accessibility, matching SimPL's philosophy. For heavy-duty JavaScript packages, use the [NPM Bridge](https://github.com/TheStrongestOfTomorrow/SimPL#npm-bridge) instead.
 
 ### Can I install a specific version?
 
@@ -298,7 +300,7 @@ NPM packages are installed separately using the `npm:` prefix:
 python simpl.py install npm:lodash
 ```
 
-See the [main SimPL README](https://github.com/thestrongestoftomorrow/SimPL#npm-bridge) for details on the NPM Bridge.
+See the [main SimPL README](https://github.com/TheStrongestOfTomorrow/SimPL#npm-bridge) for details on the NPM Bridge.
 
 ---
 
