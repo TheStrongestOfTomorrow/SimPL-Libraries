@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://github.com/marcosgambeta/links/blob/main/README.md",
+    "name": "links/README.md at main · marcosgambeta/links · GitHub",
+    "snippet": "... README ... C++ GitHub. Standard C++ Foundation https://github.com/isocpp CppCon ... C Programming Tutorial for Beginners | Learn C Programming Language Tutorial",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/RedSkittleFox/Cpp-Learning-Resources/blob/master/README.md",
+    "name": "Cpp-Learning-Resources/README.md at master - GitHub",
+    "snippet": "This document contains videos and articles about different aspects of C++ programming. The best way to learn from them is to try them out yourself, ...",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/abhi3700/My_Learning-Cpp/blob/master/README.md",
+    "name": "My_Learning-Cpp/README.md at master - GitHub",
+    "snippet": "Learn C++ programming from past experienced programmers Java, Python, C. Installation. Mac. Follow this. Linux (via WSL) ...",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/dereknguyen269/programing-best-practices-2023/blob/master/README.md",
+    "name": "README.md - dereknguyen269/programing-best-practices - GitHub",
+    "snippet": "Multi-Language — Covers 30+ programming languages and frameworks ... The C++ Core Guidelines — @isocpp; C++ Best Practices (CppCon) · C++ Best Practices by ...",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/Durganshu/Modern-Cpp-Performance",
+    "name": "Durganshu/Modern-Cpp-Performance: This repository  - GitHub",
+    "snippet": "This repository contains a set of benchmarks evaluating different features of Modern C++ (C++11 and later). The aim is to identify practices for achieving ...",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

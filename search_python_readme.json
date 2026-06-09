@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://realpython.com/readme-python-project",
+    "name": "Creating Great README Files for Your Python Projects",
+    "snippet": "In this tutorial, you'll learn how to create, organize, and format high-quality README files for your Python projects.",
+    "host_name": "realpython.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://stackoverflow.com/questions/25428169/what-format-for-a-python-packages-readme-on-github",
+    "name": "What format for a Python package's README on github?",
+    "snippet": "The Python distutils in setup.py looks for README and README.txt in the root directory of a package. github recognizes formats like README.md ...",
+    "host_name": "stackoverflow.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/pemtajo/badge-readme",
+    "name": "pemtajo/badge-readme: Add badges in your Readme - GitHub",
+    "snippet": "Badge Readme is an open-source GitHub Action that automatically fetches and displays your Credly badges in your GitHub profile README.",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=12trn2NKw5I",
+    "name": "How to Write a README for Your Beginner Python Project - YouTube",
+    "snippet": "This is a lesson in a python short course. This will demonstrate how to design and write an engaging readme file for your Github repository.",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sharifsuliman.medium.com/modern-github-badges-for-open-source-repositories-fb4dceeb368a",
+    "name": "Modern Github Badges For Open Source Repositories | by Sulstice",
+    "snippet": "Badges have been around on Github for a long time, but how to use them correctly is often misunderstood. So in my experience here is my ...",
+    "host_name": "sharifsuliman.medium.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

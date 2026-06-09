@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://github.com/Ileriayo/markdown-badges",
+    "name": "GitHub - Ileriayo/markdown-badges: The largest curated collection",
+    "snippet": "Enter the name of the badge you need. Copy the appropriate ![Name](link) element and paste it in your Markdown file (e.g. README.md). You could also ...",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://users.rust-lang.org/t/badge-at-github-with-a-current-version-dynamically-without-crates-io/54673",
+    "name": "Badge at github with a current version, dynamically, without crates.io",
+    "snippet": "There's another repo into which I want to add a bagde-tags, into README.md, which will show the current version of the A and do so dynamically.",
+    "host_name": "users.rust-lang.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=4cgpu9L2AE8",
+    "name": "Enhance Your GitHub README with Badges: A Shields.io Tutorial",
+    "snippet": "Enhance Your GitHub README with Badges: A Shields.io Tutorial. 27K views · 2 years ago. #Coding #GitHub #Development ...more. Travels Code. 5.4K.",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/rust-lang/reference/blob/master/README.md",
+    "name": "README.md - rust-lang/reference - GitHub",
+    "snippet": "This document is the primary reference for the Rust programming language. Contributor docs. See the Reference Developer Guide for information on contributing to ...",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://daily.dev/blog/readme-badges-github-best-practices",
+    "name": "Readme Badges GitHub: Best Practices - daily.dev",
+    "snippet": "Learn the best practices for using GitHub readme badges, understanding their importance for project visibility, selecting relevant badges, ...",
+    "host_name": "daily.dev",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]
