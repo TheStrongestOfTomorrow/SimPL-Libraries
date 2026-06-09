@@ -6,7 +6,7 @@
 
 *Publish. Install. Share.*
 
-[![SimPL](https://img.shields.io/badge/SimPL-0.5.0-blue.svg)](https://github.com/thestrongestoftomorrow/SimPL)
+[![SimPL](https://img.shields.io/badge/SimPL-0.6.0-blue.svg)](https://github.com/thestrongestoftomorrow/SimPL)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Packages](https://img.shields.io/badge/packages-community-orange.svg)](#-available-packages)
 
