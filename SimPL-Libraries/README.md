@@ -6,11 +6,11 @@
 
 *Publish. Install. Share.*
 
-[![SimPL](https://img.shields.io/badge/SimPL-0.4.0-blue.svg)](https://github.com/thestrongestoftomorrow/SimPL)
+[![SimPL](https://img.shields.io/badge/SimPL-0.5.0-blue.svg)](https://github.com/thestrongestoftomorrow/SimPL)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Packages](https://img.shields.io/badge/packages-community-orange.svg)](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues)
+[![Packages](https://img.shields.io/badge/packages-community-orange.svg)](#-available-packages)
 
-[Browse Packages](#browsing-packages) · [Publish a Package](#publishing-a-package) · [Install a Package](#installing-a-package) · [Guidelines](#package-guidelines)
+[Quick Start](#quick-start) · [Available Packages](#-available-packages) · [Publish a Package](#publishing-a-package) · [Install a Package](#installing-a-package) · [Guidelines](#package-guidelines)
 
 </div>
 
@@ -22,15 +22,39 @@ SimPL-Libraries is the official community package registry for the SimPL program
 
 ## Table of Contents
 
+- [Quick Start](#quick-start)
 - [How It Works](#how-it-works)
-- [Browsing Packages](#browsing-packages)
+- [📦 Available Packages](#-available-packages)
 - [Installing a Package](#installing-a-package)
 - [Publishing a Package](#publishing-a-package)
 - [Package Format](#package-format)
 - [Package Guidelines](#package-guidelines)
-- [Available Packages](#available-packages)
 - [FAQ](#faq)
 - [License](#license)
+
+---
+
+## Quick Start
+
+**Install and use a package in 30 seconds:**
+
+```bash
+# 1. Install a package
+python simpl.py install super-math
+
+# 2. Use it in your SimPL code
+```
+
+```simpl
+import super-math
+
+let result = super-math.add(10, 20)
+print result  # 30
+```
+
+That's it! Browse all packages below or in the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
+
+> **Tip**: You can also install packages from the **TUI** — launch `python simpl.py` and use the built-in package menu to browse and install without leaving the interface.
 
 ---
 
@@ -51,19 +75,31 @@ There is no central server, no authentication, and no build pipeline. GitHub Iss
 
 ---
 
-## Browsing Packages
+## 📦 Available Packages
 
-All available packages are listed in the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues) of this repository. Each Issue title is the package name.
+> **Note**: This section is manually updated. For the full, always-up-to-date list, check the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
 
-| How to browse | Link |
-|---|---|
-| All open packages | [Issues → Open](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen) |
-| Search by keyword | Use the GitHub Issues search bar |
-| By category | Look for labels on Issues (e.g., `math`, `string`, `io`) |
+### Official Packages
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| `super-math` | 1.0.0 | Enhanced math functions: add, subtract, multiply, divide, power, max, min |
+| `string-utils` | 1.0.0 | String utility functions: uppercase, lowercase, length, capitalize, reverse, contains, starts_with, ends_with |
+| `io-utils` | 0.5.0 | File I/O utilities: read_file, write_file, append_file, file_exists, file_size |
+| `list-tools` | 0.5.0 | Advanced list operations: filter, map, reduce, flatten, zip, unique |
+| `color-kit` | 0.3.0 | Terminal color output: red, green, blue, yellow, bold, underline |
+
+### Community Packages
+
+Community packages are published by users like you! Browse them all in the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues?q=is%3Aissue+is%3Aopen).
+
+*Want to see your package listed here? Publish it and open a PR to update this table!*
 
 ---
 
 ## Installing a Package
+
+### From the Command Line
 
 From the SimPL project directory:
 
@@ -82,6 +118,15 @@ import super-math
 
 let result = super-math.add(10, 20)
 print result  # 30
+```
+
+### From the TUI
+
+Launch the SimPL TUI and use the built-in package menu to browse and install packages interactively — no need to remember package names or leave the interface:
+
+```bash
+python simpl.py
+# Navigate to the package menu from the TUI home screen
 ```
 
 ### Managing Installations
@@ -124,7 +169,7 @@ let my-greeter.version = "1.0.0"
 
 ### Step 2: Create the Issue
 
-1. Go to [Issues → New Issue](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues/new)
+1. Go to [Issues → New Issue](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues/new/choose) and select the **Package Submission** template
 2. Set the **title** to your exact package name (e.g., `my-greeter`)
 3. Add the YAML frontmatter and code block (see [Package Format](#package-format) below)
 4. Submit the Issue
@@ -188,6 +233,7 @@ end
 
 - Must be enclosed in triple backticks with the `simpl` language tag
 - Can contain any valid SimPL code: functions, variables, constants
+- Package code can use **any SimPL syntax flavor** (default, Python-style, Ruby-style, etc.) — choose whichever you prefer, but use it consistently within a single package
 - Follow the `package-name.function-name` naming convention to avoid collisions
 
 ---
@@ -212,26 +258,13 @@ end
 
 5. **Test before publishing** — Run your package locally with `python simpl.py run test.simpl` before opening the Issue. Use `--mock` mode to test without network if needed.
 
-6. **Don't mix flavors in one package** — While SimPL supports three syntax flavors, pick one and use it consistently throughout your package for readability.
+6. **Pick one syntax flavor per package** — While package code can use any SimPL syntax flavor, choose one and use it consistently throughout your package for readability.
 
 ### What NOT to Publish
 
 - **Single-function packages** — Unless the function is genuinely complex (e.g., a full JSON parser), consider grouping related functions into a larger package.
 - **Packages that wrap `js_eval()` only** — If your package is just a thin wrapper around `js_eval("require('some-npm-package')")`, users can do that directly. Reserve SimPL-Libraries for native SimPL code.
 - **Offensive or malicious code** — Packages containing harmful, offensive, or deliberately broken code will be closed and removed.
-
----
-
-## Available Packages
-
-> **Note**: This section is manually updated. For the full list, always check the [Issues tab](https://github.com/thestrongestoftomorrow/SimPL-Libraries/issues).
-
-| Package | Version | Description |
-|---------|---------|-------------|
-| `super-math` | 1.0.0 | Enhanced math functions: add, subtract, multiply, divide, power, max, min |
-| `string-utils` | 0.5.0 | String utility functions: uppercase, lowercase, length |
-
-*Want to see your package here? Publish it and open a PR to update this table!*
 
 ---
 
@@ -253,6 +286,10 @@ Open a comment on the package's Issue describing the bug. The package author can
 
 Close the Issue. Closed Issues are not indexed by the package manager, so the package becomes unavailable. You can reopen it later if needed.
 
+### Can I install packages from the TUI?
+
+Yes! Launch `python simpl.py` and navigate to the package menu from the TUI home screen. You can browse available packages and install them directly without using the command line.
+
 ### What about NPM packages?
 
 NPM packages are installed separately using the `npm:` prefix:
@@ -267,6 +304,6 @@ See the [main SimPL README](https://github.com/thestrongestoftomorrow/SimPL#npm-
 
 ## License
 
-SimPL-Libraries is released under the [MIT License](LICENSE). Individual packages may have their own licenses — check the package's Issue for details.
+SimPL-Libraries is released under the [MIT License](LICENSE). A copy of the license is included in the repository. Individual packages may have their own licenses — check the package's Issue for details.
 
 Copyright (c) 2024-2026 TheStrongestOfTomorrow
